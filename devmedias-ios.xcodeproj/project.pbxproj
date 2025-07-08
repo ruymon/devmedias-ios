@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F91EFCBD2E1C9988005B726B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F91EFCBC2E1C9984005B726B /* LICENSE */; };
+		F91EFCBF2E1C99A5005B726B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F91EFCBE2E1C99A0005B726B /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F91EFC762E1C7ECA005B726B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		F91EFC682E1C7EC9005B726B /* devmedias-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "devmedias-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91EFC752E1C7ECA005B726B /* devmedias-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "devmedias-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91EFC7F2E1C7ECA005B726B /* devmedias-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "devmedias-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91EFCBC2E1C9984005B726B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F91EFCBE2E1C99A0005B726B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +82,8 @@
 		F91EFC5F2E1C7EC9005B726B = {
 			isa = PBXGroup;
 			children = (
+				F91EFCBC2E1C9984005B726B /* LICENSE */,
+				F91EFCBE2E1C99A0005B726B /* README.md */,
 				F91EFC6A2E1C7EC9005B726B /* devmedias-ios */,
 				F91EFC782E1C7ECA005B726B /* devmedias-iosTests */,
 				F91EFC822E1C7ECA005B726B /* devmedias-iosUITests */,
@@ -212,6 +221,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91EFCBF2E1C99A5005B726B /* README.md in Resources */,
+				F91EFCBD2E1C9988005B726B /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
