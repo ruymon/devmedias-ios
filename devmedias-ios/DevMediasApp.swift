@@ -1,5 +1,5 @@
 //
-//  devmedias_iosApp.swift
+//  DevMediasApp.swift
 //  devmedias-ios
 //
 //  Created by Ruy Monteiro on 07/07/25.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct devmedias_iosApp: App {
+struct DevMediasApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
     }
 }

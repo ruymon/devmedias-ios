@@ -1,5 +1,5 @@
 //
-//  MediasChartView.swift
+//  OverviewChartView.swift
 //  devmedias-ios
 //
 //  Created by Ruy Monteiro on 07/07/25.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-struct MediasChartView: View {
+struct OverviewChartView: View {
     var subjects: [Subject]
 
     var body: some View {
@@ -16,6 +16,7 @@ struct MediasChartView: View {
             HStack {
                 Text("MÉDIAS")
                     .font(.caption2)
+                    .foregroundColor(.secondary)
                 Spacer()
                 Label("~ 2,5 abaixo do ideal", systemImage: "arrow.down")
                     .font(.caption)
@@ -29,20 +30,21 @@ struct MediasChartView: View {
                         y: .value("Nota", subject.provas)
                     )
                     .foregroundStyle(.blue)
-
+   
                     BarMark(
                         x: .value("Matéria", subject.code),
-                        y: .value("Nota", subject.trabalhos)
+                        y: .value("Nota", subject.trabalhos),
+                        stacking: .standard
                     )
                     .foregroundStyle(.orange)
-                    .position(by: .value("Segmento", "Trabalho"))
-
+                    
+    
                     BarMark(
                         x: .value("Matéria", subject.code),
-                        y: .value("Nota", subject.pendente)
+                        y: .value("Nota", subject.pendente),
+                        stacking: .standard
                     )
-                    .foregroundStyle(.gray)
-                    .position(by: .value("Segmento", "Pendente"))
+                    .foregroundStyle(Color(.systemGray6))
                 }
 
                 RuleMark(y: .value("Meta", 6))
@@ -57,7 +59,7 @@ struct MediasChartView: View {
             .chartYAxis {
                 AxisMarks(position: .leading)
             }
-            .frame(height: 220)
+            .frame(height: 200)
 
             HStack(spacing: 16) {
                 LegendDot(color: .blue, label: "Provas")

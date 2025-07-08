@@ -8,10 +8,34 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @StateObject var gradeStorage = GradeStorageService()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            SummaryView()
+                .tabItem {
+                    Label("Resumo", systemImage: "house.fill")
+                }
+
+            GradesView()
+                .tabItem {
+                    Label("Notas e médias", systemImage: "doc.text.fill")
+                }
+
+            PrizesView()
+                .tabItem {
+                    Label("Premiações", systemImage: "rosette")
+                }
+
+            ProfileView()
+                .tabItem {
+                    Label("Perfil", systemImage: "person.crop.circle")
+                }
+        }
+        .environmentObject(gradeStorage)
     }
 }
+
 
 #Preview {
     MainTabView()
